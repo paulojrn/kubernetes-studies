@@ -1,0 +1,20 @@
+* install docker => isolate environments in containers
+* install kubernetes => automate container deployments, scaling and management
+* install minikube => enable run kubernetes locally by creating a VM on local machine and deploys simple cluster containing only one node
+* ensure which docker is up
+* minikube start --vm-driver=docker => start minikube with and driver to virtualize (docker)
+* kubectl get nodes => show exists nodes
+* kubectl get pods => show exists pods
+* kubectl get pods -o wide => more details
+* kubectl run <pod_name> --image=<some_image> => create a pod
+* kubectl describe pod <some_pod_name>
+* kubectl apply -f .\<some_json_or_yaml_file> => declarative form to create a pod (prefer that way)
+* kubectl delete pod <pod_name>
+* kubectl delete -f <path_to_some_file>
+* kubectl exec -it <pod_name> -- <command>
+
+* node => a worker machine which may be either a virtual or a physical machine, depending on the cluster. contains one or more pods inside.
+* pod => isolate environment with one or more containers.
+* svc => service to network help (ip, dns, ...) and load balance => contains ClusterIP, NodePort and LoadBalancer
+* ClusterIP => communication with different pods inside same cluster
+* NodePort => allow communication with node external environment (browse for example)

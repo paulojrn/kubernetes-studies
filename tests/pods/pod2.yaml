@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    app: second-pod
+    # alura: cursos
+    # etc: blablabla
+spec:
+  containers:
+    - name: pod2-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80 # do not conflict with other pod because which pod have youw own id

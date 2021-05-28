@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-clusterip-newsdatabase
+spec:
+  type: ClusterIP
+  selector:
+    app: pod-label-newsdatabase
+  ports:
+    - port: 3306 # service port listen
+      targetPort: 3306 # pod port listen
